@@ -10,7 +10,6 @@ bool dfs(vector<int> &aTree,vector<bool> &visited,vector<int> &path,int v, int t
 
     	if (v == target) 
         	return true;
-
 	for(int i=0;i<aTree.size();++i){
 		if(aTree[i] ==v &&!visited[i]){
 			if(dfs(aTree,visited,path,i,target)){
@@ -45,7 +44,8 @@ int perTree(vector<int> &aTree,int target){
 int main(){
 	int n;
 	cin >> n;
-	for (int run=0;run<n;run++){
+	for(int run=0;run<n;run++)
+	{
 		string mkv_input;
 		
 		cin >> mkv_input;
