@@ -1,6 +1,4 @@
 #include<bits/stdc++.h>
-#include<sstream>
-#include<iostream>
 
 using namespace std;
 
@@ -32,7 +30,7 @@ int perTree(vector<int> &aTree,int target){
 	vector<int> path;
 
     	if (dfs(aTree, visited, path, root, target)) {
-        	return path.size()-2;
+        	return path.size()-1;
     	} 
     	else {
 		cout << "error";
@@ -42,6 +40,7 @@ int perTree(vector<int> &aTree,int target){
 }
 
 int main(){
+	ios_base::sync_with_stdio(false),cin.tie(nullptr);
 	int n;
 	cin >> n;
 	for(int run=0;run<n;run++)
@@ -71,7 +70,6 @@ int main(){
 			}
 		}
 		
-		
 		for(int i=0;i<mkv[1];++i){
 			vector<int> aTree;
 			for(int j=0;j<mkv[0];++j){
@@ -81,6 +79,7 @@ int main(){
 			if (i!=mkv[1]-1)
 				cout << ",";
 		}
+		cout << endl;
 	}
 	return 0;
 }
